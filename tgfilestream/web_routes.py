@@ -39,6 +39,11 @@ async def handle_get_request(req: web.Request) -> web.Response:
     return await handle_request(req, head=False)
 
 
+@routes.get(r"/")
+async def handle_home_request(req: web.Request) -> web.Response:
+    return web.Response(text="Hello There!")
+
+
 def allow_request(ip: str) -> None:
     return ongoing_requests[ip] < request_limit
 
