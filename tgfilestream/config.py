@@ -39,6 +39,7 @@ host = os.environ.get("HOST", "localhost")
 public_url = URL(os.environ.get("PUBLIC_URL", f"http://{host}:{port}"))
 
 session_name = os.environ.get("TG_SESSION_NAME", "tgfilestream")
+bot_token = os.environ.get("BOT_TOKEN", "tgfilestream")
 
 log_config = os.environ.get("LOG_CONFIG")
 debug = bool(os.environ.get("DEBUG"))

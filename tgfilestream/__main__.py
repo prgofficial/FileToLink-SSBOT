@@ -32,7 +32,7 @@ loop = asyncio.get_event_loop()
 
 
 async def start() -> None:
-    await client.start()
+    await client.start(bot_tokenclient.bot_token)
 
     config = await client(functions.help.GetConfigRequest())
     for option in config.dc_options:
