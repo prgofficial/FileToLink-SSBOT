@@ -29,12 +29,12 @@ routes = web.RouteTableDef()
 ongoing_requests: Dict[str, int] = defaultdict(lambda: 0)
 
 
-@routes.head(r"/{id:\d+}/{name}")
+@routes.head(r"/stream/{id:\d+}")
 async def handle_head_request(req: web.Request) -> web.Response:
     return await handle_request(req, head=True)
 
 
-@routes.get(r"/{id:\d+}/{name}")
+@routes.get(r"/stream/{id:\d+}")
 async def handle_get_request(req: web.Request) -> web.Response:
     return await handle_request(req, head=False)
 
@@ -57,7 +57,6 @@ def decrement_counter(ip: str) -> None:
 
 
 async def handle_request(req: web.Request, head: bool = False) -> web.Response:
-    file_name = req.match_info["name"]
     file_id = int(req.match_info["id"])
     peer, msg_id = unpack_id(file_id)
     if not peer or not msg_id:
@@ -83,6 +82,5 @@ async def handle_request(req: web.Request, head: bool = False) -> web.Response:
                             "Content-Type": message.file.mime_type,
                             "Content-Range": f"bytes {offset}-{size}/{size}",
                             "Content-Length": str(limit - offset),
-                            "Content-Disposition": f'attachment; filename="{file_name}"',
                             "Accept-Ranges": "bytes",
                         })
