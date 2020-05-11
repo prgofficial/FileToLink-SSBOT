@@ -30,24 +30,8 @@ runner = web.AppRunner(server)
 
 loop = asyncio.get_event_loop()
 
-
-async def keep_alive():
-    async with ClientSession() as session:
-        while True:
-            try:
-                log.debug(f"keping service alive")
-                r = await session.get(public_url)
-                await asyncio.sleep(60*20)
-            except Exception as e:
-                log.warning(f"{str(e)}")
-            except asyncio.CancelledError:
-                break
-
-
 async def start() -> None:
     await client.start(bot_token = bot_token)
-    
-    asyncio.create_task(keep_alive())
 
     config = await client(functions.help.GetConfigRequest())
     for option in config.dc_options:

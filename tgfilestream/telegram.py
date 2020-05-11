@@ -25,13 +25,3 @@ log = logging.getLogger(__name__)
 
 client = TelegramClient(session_name, api_id, api_hash)
 transfer = ParallelTransferrer(client)
-
-
-@client.on(events.NewMessage)
-async def handle_message(evt: events.NewMessage.Event) -> None:
-    if not evt.is_private or not evt.file:
-        return
-    url = public_url / str(pack_id(evt)) / get_file_name(evt)
-    await evt.reply(f"{url}", parse_mode=None)
-    log.info(f"Replied with link for {evt.id} to {evt.from_id} in {evt.chat_id}")
-    log.debug(f"Link to {evt.id} in {evt.chat_id}: {url}")
