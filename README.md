@@ -1,4 +1,5 @@
-# tgfilestream
+# Musical Waddle
+
 A Telegram bot that can stream Telegram files to users over HTTP.
 
 ## Setup
@@ -8,6 +9,10 @@ environment variables (see below) and run with `python3 -m tgfilestream`.
 A reverse proxy is recommended to add TLS. When using a reverse proxy, keep
 `HOST` as-is, but add the publicly accessible URL to `PUBLIC_URL`. The URL
 should include the protocol, e.g. `https://example.com`.
+
+### You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TGExplore/musical-waddle/tree/master)
 
 ### Environment variables
 * `TG_API_ID` (required) - Your Telegram API ID.
@@ -21,3 +26,7 @@ should include the protocol, e.g. `https://example.com`.
 * `LOG_CONFIG` - Path to a Python basic log config. Overrides `DEBUG`.
 * `REQUEST_LIMIT` (default 5) - The maximum number of requests a single IP can have active at a time.
 * `CONNECTION_LIMIT` (default 20) - The maximum number of connections to a single Telegram datacenter.
+
+## Thanks
+
+Thanks to [Tulir Asokan](https://github.com/tulir "Tulir Asokan") for his [TgFileStream](https://github.com/tulir/tgfilestream "TgFileStream") Bot.

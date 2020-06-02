@@ -1,0 +1,34 @@
+{
+ "name": "TG Files to Link",
+ "description": "Telegram files to Direct link!!",
+ "logo": "https://telegra.ph/file/c3d25aa057a3aa2282d50.png",
+ "keywords": [
+   "telegram",
+   "FiletoLinkBot",
+   "For ScreenShot Bot"
+  ],
+ "repository": "https://github.com/TGExplore/TG-Files-to-Link",
+ "env": {
+   "TG_API_ID": {
+      "description": "Your Telegram API ID. Get this value from my.telegram.org!",
+      "value": ""
+  },
+   "TG_API_HASH": {
+      "description": " Your Telegram API hash. Get this value from my.telegram.org!",
+      "value": ""
+  },
+   "BOT_TOKEN": {
+      "description": "Your Bot token, as a string",
+      "value": ""
+  },
+   "HOST": {
+      "description": "Leave the Same Value",
+      "value": "0.0.0.0",
+      "required": false
+  },
+   "PUBLIC_URL": {
+      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+      "value": ""
+  }
+ }
+}
