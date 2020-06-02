@@ -29,10 +29,6 @@
    "PUBLIC_URL": {
       "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
       "value": ""
-  },
-   "TG_START_MESG": {
-      "description": "Set /start Message",
-      "value": ""
   }
  }
 }
