@@ -1,4 +1,4 @@
-# File TO Link
+# File TO Link HOST For Screenshot Bot
 
 A Telegram bot that can stream Telegram files to users over HTTP.
 
@@ -6,4 +6,4 @@ A Telegram bot that can stream Telegram files to users over HTTP.
 
 ### You can tap the Deploy To Heroku button below to deploy straight to Heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/FileToLink-http)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/FileToLink-SSBOT)
