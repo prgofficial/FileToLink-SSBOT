@@ -1,6 +1,7 @@
 # File TO Link HOST For Screenshot Bot
 
-A Telegram bot that can stream Telegram files to users over HTTP.
+This repo works for Screenshot Bot.
+Deploy to heroku and USE AS HOST for ScreenShot Bot
 
 ## Installation
 
